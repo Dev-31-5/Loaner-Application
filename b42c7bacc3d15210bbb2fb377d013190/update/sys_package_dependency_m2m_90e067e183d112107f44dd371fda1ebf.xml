@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
     <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
-        <dependency display_value="Task table schema" source="com.glide.task">c84cbf2af832021008dd9cfea425ac5e</dependency>
+        <dependency display_value="Task table schema" source="com.glide.task">dcfc891b702231107f44a29f360a785b</dependency>
         <min_version>1.0.0</min_version>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2024-10-14 11:44:12</sys_created_on>
-        <sys_id>ae0eb764c3d55210bbb2fb377d0131bb</sys_id>
+        <sys_id>90e067e183d112107f44dd371fda1ebf</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_package display_value="Loner Request" source="x_1526931_loner_re">b42c7bacc3d15210bbb2fb377d013190</sys_package>
         <sys_updated_by>admin</sys_updated_by>
