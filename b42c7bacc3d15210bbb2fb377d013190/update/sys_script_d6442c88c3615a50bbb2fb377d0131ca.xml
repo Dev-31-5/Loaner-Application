@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_1526931_loner_re_loaner_request</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Retrieved Credentials</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Add your code here
+	if (current.item_type =="cmdb_ci_computer") {
+	var request = new sn_ws.RESTMessageV2();
+	request.setEndpoint('https://dev193940.service-now.com/api/now/table/u_password_import_file?sysparm_query=u_asset%3D'+ current.cmdb_ci.asset_tag +'&sysparm_fields=u_password&sysparm_limit=1');
+request.setHttpMethod('GET');
+
+//Eg. UserName="admin", Password="admin" for this code sample.
+var user = 'admin';
+var password = 'nz=oSNI*8B3i';
+
+request.setBasicAuth(user,password);
+request.setRequestHeader("Accept","application/json");
+
+var response = request.execute();
+gs.info(response.getBody());
+
+var  obj=JSON.parse(request.getBody());
+var myPass=obj.result[0].u_password;
+gs.info('u_passord'+myPass);
+
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-24 17:09:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d6442c88c3615a50bbb2fb377d0131ca</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Retrieved Credentials</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Loner Request" source="x_1526931_loner_re">b42c7bacc3d15210bbb2fb377d013190</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loner Request">b42c7bacc3d15210bbb2fb377d013190</sys_scope>
+        <sys_update_name>sys_script_d6442c88c3615a50bbb2fb377d0131ca</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-24 17:20:59</sys_updated_on>
+        <template/>
+        <when>async_always</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=d6442c88c3615a50bbb2fb377d0131ca"/>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>d6442c88c3615a50bbb2fb377d0131ca</id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-24 17:09:31</sys_created_on>
+        <sys_id>e5682c40c3e15a50bbb2fb377d0131ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-24 17:09:31</sys_updated_on>
+        <table>sys_script</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
