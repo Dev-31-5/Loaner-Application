@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2024-10-23 06:50:03</sys_created_on>
+        <sys_id>ad01d923c31d9e10bbb2fb377d0131cc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1526931_loner_re_loaner_task.x_1526931_loner_re.admin</sys_name>
+        <sys_package display_value="Loner Request" source="x_1526931_loner_re">b42c7bacc3d15210bbb2fb377d013190</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Loner Request">b42c7bacc3d15210bbb2fb377d013190</sys_scope>
+        <sys_security_acl display_value="x_1526931_loner_re_loaner_task">e901d923c31d9e10bbb2fb377d0131a2</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_ad01d923c31d9e10bbb2fb377d0131cc</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2024-10-23 06:50:03</sys_updated_on>
+        <sys_user_role display_value="x_1526931_loner_re.admin" name="x_1526931_loner_re.admin">2147bbc7c39d9610bbb2fb377d013177</sys_user_role>
+    </sys_security_acl_role>
+</record_update>
